@@ -16,12 +16,16 @@ jobs:
       matrix:
         build:
           - {
-              NAME: x86_64-linux,
-              TARGET: x86_64-unknown-linux-musl,
-            }
-          - {
               NAME: aarch64-linux,
               TARGET: aarch64-unknown-linux-musl,
+            }
+          - {
+              NAME: riscv64-linux,
+              TARGET: riscv64gc-unknown-linux-musl,
+            }
+          - {
+              NAME: x86_64-linux,
+              TARGET: x86_64-unknown-linux-musl,
             }
     steps:
       - name: Checkout
